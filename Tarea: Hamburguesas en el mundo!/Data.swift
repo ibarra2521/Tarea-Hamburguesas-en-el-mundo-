@@ -10,26 +10,26 @@ import Foundation
 import UIKit
 
 class CollectionCountries {
-    let countries = ["Afganistán",
-    "Akrotiri",
+    let countries = ["Afganistan",
+    "Canada",
     "Albania",
     "Alemania",
     "Andorra",
     "Angola",
-    "Anguila",
-    "Antártida",
+    "Japon",
+    "Somalia",
     "Antigua y Barbuda",
-    "Antillas Neerlandesas",
-    "Arabia Saudí",
-    "Arctic Ocean",
+    "Haiti",
+    "Chile",
+    "Italy",
     "Argelia",
     "Argentina",
     "Armenia",
-    "Aruba",
+    "Namibia",
     "Austria",
-    "Azerbaiyán",
+    "Azerbaiyan",
     "Bahamas",
-    "México"]
+    "Mexico"]
     
     func getCountry() -> String {
         return countries[Int(arc4random()) % countries.count]
@@ -42,7 +42,7 @@ class CollectionBurgers {
         "Upscale Sliders",
         "KGB Burger",
         "Chuck's Super Burgers",
-        "The B and B 'Bash Burger'",
+        "The B and B Bash Burger",
         "Latin Macho Burger",
         "The Burger Bar",
         "Bacon, Onion and Cheese Stuffed Burger",
@@ -58,9 +58,14 @@ class CollectionBurgers {
         "Burgers with Crispy Pepperoni, Radicchio and Red Onion Slaw",
         "Burger of the Gods"]
 
-    func getBurgers() -> String {
-        return burgers[Int(arc4random()) % burgers.count]
+//    func getBurgers() -> String {
+//        return burgers[Int(arc4random()) % burgers.count]
+//    }
+        
+    func getBurgers() -> (Int, String) {
+        return ((Int(arc4random()) % 15) + 10, burgers[Int(arc4random()) % burgers.count])
     }
+
 }
 
 class Colors {

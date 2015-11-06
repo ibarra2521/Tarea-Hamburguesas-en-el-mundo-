@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblBurger: UILabel!
     @IBOutlet weak var lblCountry: UILabel!
+    @IBOutlet weak var ivBurger: UIImageView!
+    @IBOutlet weak var ivCountry: UIImageView!
+    
     let country = CollectionCountries()
     let burger = CollectionBurgers()
     let colors =  Colors()
@@ -28,9 +32,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func wantABurger() {
-        lblCountry.text =  country.getCountry()
-        lblBurger.text = burger.getBurgers()
-        
+        let nameBurger = burger.getBurgers()
+        let nameCountry = country.getCountry()
+        lblCountry.text = nameCountry
+        lblBurger.text = nameBurger.1
+        lblPrice.text = "$ \(nameBurger.0)"
+        ivBurger.image = UIImage(named: nameBurger.1)
+        ivCountry.image = UIImage(named: nameCountry)
         view.backgroundColor = colors.getRandomColor()
         view.tintColor = colors.getRandomColor()
     }
