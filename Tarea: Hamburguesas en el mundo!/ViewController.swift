@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblBurger: UILabel!
+    @IBOutlet weak var lblCountry: UILabel!
+    let country = CollectionCountries()
+    let burger = CollectionBurgers()
+    let colors =  Colors()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +27,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func wantABurger() {
+        lblCountry.text =  country.getCountry()
+        lblBurger.text = burger.getBurgers()
+        
+        view.backgroundColor = colors.getRandomColor()
+        view.tintColor = colors.getRandomColor()
+    }
 }
 
