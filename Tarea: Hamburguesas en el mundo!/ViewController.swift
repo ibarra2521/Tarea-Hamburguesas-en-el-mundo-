@@ -35,9 +35,9 @@ class ViewController: UIViewController {
         let nameBurger = burger.getBurgers()
         let nameCountry = country.getCountry()
         lblCountry.text = nameCountry
-        lblBurger.text = nameBurger.1
-        lblPrice.text = "$ \(nameBurger.0)"
-        ivBurger.image = UIImage(named: nameBurger.1)
+        lblBurger.text = nameBurger.nameBurger
+        lblPrice.text = "$ \(nameBurger.price)"
+        ivBurger.image = UIImage(named: nameBurger.nameBurger)
         ivCountry.image = UIImage(named: nameCountry)
         view.backgroundColor = colors.getRandomColor()
         view.tintColor = colors.getRandomColor()

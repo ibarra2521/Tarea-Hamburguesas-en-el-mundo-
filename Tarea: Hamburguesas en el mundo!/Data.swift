@@ -62,7 +62,7 @@ class CollectionBurgers {
 //        return burgers[Int(arc4random()) % burgers.count]
 //    }
         
-    func getBurgers() -> (Int, String) {
+    func getBurgers() -> (price: Int, nameBurger: String) {
         return ((Int(arc4random()) % 15) + 10, burgers[Int(arc4random()) % burgers.count])
     }
 
